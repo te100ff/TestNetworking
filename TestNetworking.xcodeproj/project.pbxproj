@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		18B9AEAA263BEB67008719CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AEA9263BEB67008719CC /* AppDelegate.swift */; };
 		18B9AEAC263BEB67008719CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AEAB263BEB67008719CC /* SceneDelegate.swift */; };
-		18B9AEAE263BEB67008719CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AEAD263BEB67008719CC /* ViewController.swift */; };
 		18B9AEB1263BEB67008719CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B9AEAF263BEB67008719CC /* Main.storyboard */; };
 		18B9AEB3263BEB67008719CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B9AEB2263BEB67008719CC /* Assets.xcassets */; };
 		18B9AEB6263BEB67008719CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B9AEB4263BEB67008719CC /* LaunchScreen.storyboard */; };
+		18B9AEC5263BF6A9008719CC /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AEC4263BF6A9008719CC /* MenuViewCell.swift */; };
+		18B9AEC7263BFCF3008719CC /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AEC6263BFCF3008719CC /* MenuCollectionViewController.swift */; };
+		18B9AEC9263BFE58008719CC /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AEC8263BFE58008719CC /* Menu.swift */; };
+		18B9AECB263C1459008719CC /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AECA263C1459008719CC /* BookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18B9AEA6263BEB67008719CC /* TestNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B9AEA9263BEB67008719CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B9AEAB263BEB67008719CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18B9AEAD263BEB67008719CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18B9AEB0263BEB67008719CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18B9AEB2263BEB67008719CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18B9AEB5263BEB67008719CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B9AEB7263BEB67008719CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B9AEC4263BF6A9008719CC /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
+		18B9AEC6263BFCF3008719CC /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewController.swift; sourceTree = "<group>"; };
+		18B9AEC8263BFE58008719CC /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		18B9AECA263C1459008719CC /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookViewController.swift; path = TestNetworking/Storyboards/BookViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				18B9AEA8263BEB67008719CC /* TestNetworking */,
-				18B9AEA7263BEB67008719CC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,20 +56,73 @@
 				18B9AEA6263BEB67008719CC /* TestNetworking.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		18B9AEA8263BEB67008719CC /* TestNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				18B9AEA9263BEB67008719CC /* AppDelegate.swift */,
-				18B9AEAB263BEB67008719CC /* SceneDelegate.swift */,
-				18B9AEAD263BEB67008719CC /* ViewController.swift */,
-				18B9AEAF263BEB67008719CC /* Main.storyboard */,
-				18B9AEB2263BEB67008719CC /* Assets.xcassets */,
-				18B9AEB4263BEB67008719CC /* LaunchScreen.storyboard */,
-				18B9AEB7263BEB67008719CC /* Info.plist */,
+				18B9AEC3263BECF1008719CC /*  Data managers */,
+				18B9AEC2263BECE4008719CC /* Models */,
+				18B9AEBE263BEBF2008719CC /* Storyboards */,
+				18B9AEBD263BEBDE008719CC /* Viewcontrollers */,
+				18B9AEC1263BEC1F008719CC /* Support */,
+				18B9AEC0263BEC0D008719CC /* Resources */,
+				18B9AEA7263BEB67008719CC /* Products */,
 			);
 			path = TestNetworking;
+			sourceTree = "<group>";
+		};
+		18B9AEBD263BEBDE008719CC /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				18B9AECA263C1459008719CC /* BookViewController.swift */,
+				18B9AEC6263BFCF3008719CC /* MenuCollectionViewController.swift */,
+				18B9AEC4263BF6A9008719CC /* MenuViewCell.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		18B9AEBE263BEBF2008719CC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18B9AEAF263BEB67008719CC /* Main.storyboard */,
+				18B9AEB4263BEB67008719CC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		18B9AEC0263BEC0D008719CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18B9AEB2263BEB67008719CC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18B9AEC1263BEC1F008719CC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				18B9AEA9263BEB67008719CC /* AppDelegate.swift */,
+				18B9AEAB263BEB67008719CC /* SceneDelegate.swift */,
+				18B9AEB7263BEB67008719CC /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		18B9AEC2263BECE4008719CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18B9AEC8263BFE58008719CC /* Menu.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18B9AEC3263BECF1008719CC /*  Data managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = " Data managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B9AEAE263BEB67008719CC /* ViewController.swift in Sources */,
+				18B9AEC9263BFE58008719CC /* Menu.swift in Sources */,
+				18B9AEC5263BF6A9008719CC /* MenuViewCell.swift in Sources */,
 				18B9AEAA263BEB67008719CC /* AppDelegate.swift in Sources */,
+				18B9AECB263C1459008719CC /* BookViewController.swift in Sources */,
 				18B9AEAC263BEB67008719CC /* SceneDelegate.swift in Sources */,
+				18B9AEC7263BFCF3008719CC /* MenuCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +349,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FC33F5QU8X;
-				INFOPLIST_FILE = TestNetworking/Info.plist;
+				INFOPLIST_FILE = TestNetworking/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = TestovStanislav.TestNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +368,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FC33F5QU8X;
-				INFOPLIST_FILE = TestNetworking/Info.plist;
+				INFOPLIST_FILE = TestNetworking/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = TestovStanislav.TestNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
