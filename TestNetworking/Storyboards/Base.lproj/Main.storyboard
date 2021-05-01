@@ -62,11 +62,44 @@
                     <navigationItem key="navigationItem" id="sh4-YT-abU"/>
                     <connections>
                         <segue destination="y4o-Ns-cRF" kind="show" identifier="bookDescription" id="l4q-BT-l7c"/>
+                        <segue destination="BXk-5z-fDR" kind="show" identifier="charachter" id="Uth-3Q-cJW"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jM-Ot-2JH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="866.66666666666674" y="123.88392857142857"/>
+        </scene>
+        <!--Charachter View Controller-->
+        <scene sceneID="McJ-nq-SH5">
+            <objects>
+                <viewController id="BXk-5z-fDR" customClass="CharachterViewController" customModule="TestNetworking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VSa-ui-OYw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbW-kW-baI">
+                                <rect key="frame" x="64" y="436" width="286" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Qn-c1-VLt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AbW-kW-baI" firstAttribute="leading" secondItem="3Qn-c1-VLt" secondAttribute="leading" constant="64" id="TWH-uE-B0Z"/>
+                            <constraint firstItem="3Qn-c1-VLt" firstAttribute="trailing" secondItem="AbW-kW-baI" secondAttribute="trailing" constant="64" id="dhz-JO-67B"/>
+                            <constraint firstItem="AbW-kW-baI" firstAttribute="centerY" secondItem="VSa-ui-OYw" secondAttribute="centerY" id="iQ1-Ja-wVT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TfZ-Ky-gBM"/>
+                    <connections>
+                        <outlet property="mainLabel" destination="AbW-kW-baI" id="Jde-W9-vdS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sid-9w-tKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="226"/>
         </scene>
         <!--Book View Controller-->
         <scene sceneID="NAv-yE-haj">
@@ -113,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ml9-50-guj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586.9565217391305" y="123.88392857142857"/>
+            <point key="canvasLocation" x="1629" y="-449"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R85-oj-CQs">

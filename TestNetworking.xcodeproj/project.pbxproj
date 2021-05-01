@@ -16,6 +16,9 @@
 		18B9AEC7263BFCF3008719CC /* MenuCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AEC6263BFCF3008719CC /* MenuCollectionViewController.swift */; };
 		18B9AEC9263BFE58008719CC /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AEC8263BFE58008719CC /* Menu.swift */; };
 		18B9AECB263C1459008719CC /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AECA263C1459008719CC /* BookViewController.swift */; };
+		18B9AECD263C2803008719CC /* Charachter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AECC263C2803008719CC /* Charachter.swift */; };
+		18B9AECF263C2BD0008719CC /* CharachterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AECE263C2BD0008719CC /* CharachterViewController.swift */; };
+		18B9AED2263DE1C0008719CC /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9AED1263DE1C0008719CC /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		18B9AEC6263BFCF3008719CC /* MenuCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewController.swift; sourceTree = "<group>"; };
 		18B9AEC8263BFE58008719CC /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		18B9AECA263C1459008719CC /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookViewController.swift; path = TestNetworking/Storyboards/BookViewController.swift; sourceTree = SOURCE_ROOT; };
+		18B9AECC263C2803008719CC /* Charachter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charachter.swift; sourceTree = "<group>"; };
+		18B9AECE263C2BD0008719CC /* CharachterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharachterViewController.swift; path = TestNetworking/Viewcontrollers/CharachterViewController.swift; sourceTree = SOURCE_ROOT; };
+		18B9AED1263DE1C0008719CC /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +82,9 @@
 		18B9AEBD263BEBDE008719CC /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				18B9AECA263C1459008719CC /* BookViewController.swift */,
 				18B9AEC6263BFCF3008719CC /* MenuCollectionViewController.swift */,
+				18B9AECA263C1459008719CC /* BookViewController.swift */,
+				18B9AECE263C2BD0008719CC /* CharachterViewController.swift */,
 				18B9AEC4263BF6A9008719CC /* MenuViewCell.swift */,
 			);
 			path = Viewcontrollers;
@@ -113,7 +120,8 @@
 		18B9AEC2263BECE4008719CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				18B9AEC8263BFE58008719CC /* Menu.swift */,
+				18B9AECC263C2803008719CC /* Charachter.swift */,
+				18B9AED1263DE1C0008719CC /* Enums.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 		18B9AEC3263BECF1008719CC /*  Data managers */ = {
 			isa = PBXGroup;
 			children = (
+				18B9AEC8263BFE58008719CC /* Menu.swift */,
 			);
 			path = " Data managers";
 			sourceTree = "<group>";
@@ -200,6 +209,9 @@
 				18B9AEAA263BEB67008719CC /* AppDelegate.swift in Sources */,
 				18B9AECB263C1459008719CC /* BookViewController.swift in Sources */,
 				18B9AEAC263BEB67008719CC /* SceneDelegate.swift in Sources */,
+				18B9AECF263C2BD0008719CC /* CharachterViewController.swift in Sources */,
+				18B9AECD263C2803008719CC /* Charachter.swift in Sources */,
+				18B9AED2263DE1C0008719CC /* Enums.swift in Sources */,
 				18B9AEC7263BFCF3008719CC /* MenuCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

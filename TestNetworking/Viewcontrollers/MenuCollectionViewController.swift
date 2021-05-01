@@ -7,88 +7,129 @@
 
 import UIKit
 
+protocol AlertDelegate {
+    func successAlert()
+    func failedDecodeAlert()
+    func failedURLAlert()
+}
+
 private let reuseIdentifier = "Cell"
 
 class MenuCollectionViewController: UICollectionViewController {
     
-    let menuItems = MenuItems.allCases
-
+    private let menuItems = MenuItems.allCases
+    private var selectedChatachter: URLList!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NetworkManager.shared.delegate = self
     }
-
+    
     // MARK: - Navigation
-
-   
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "bookDescription" {
-//            guard let bookVC = segue.destination as? BookViewController { return }
-//        }
-//    }
-
-    // MARK: UICollectionViewDataSource
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       menuItems.count
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "charachter" {
+            guard let charachterVC = segue.destination as? CharachterViewController else { return }
+            guard let selected = selectedChatachter else { return }
+            
+            NetworkManager.shared.fetchCharachterData(source: selected) { charachter in
+                charachterVC.charachter = charachter
+                DispatchQueue.main.async {
+                    charachterVC.mainLabel.text = charachterVC.charachter.description
+                    charachterVC.mainLabel.isHidden.toggle()
+                    charachterVC.reloadInputViews()
+                }
+            }
+        }
     }
-
+    
+    // MARK: UICollectionViewDataSource
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        menuItems.count
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MenuViewCell
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MenuViewCell
         cell.menuLabel.text = menuItems[indexPath.item].rawValue
-    
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
-    }
-    */
+    
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let menuItemSelected = menuItems[indexPath.item]
         
         switch menuItemSelected {
-
         case .aboutBook: performSegue(withIdentifier: "bookDescription", sender: nil)
-        case .jonSnow: print("Jon Snow")
+        case .jonSnow:
+            selectedChatachter = .jonSnow
+            performSegue(withIdentifier: "charachter", sender: nil)
+        case .daenerys:
+            selectedChatachter = .daenerys
+            self.performSegue(withIdentifier: "charachter", sender: nil)
+            
+        case .urlErrorAlert:
+            selectedChatachter = .urlErrorAlert
+            self.performSegue(withIdentifier: "charachter", sender: nil)
+        case .decodeErrorAlert:
+            selectedChatachter = .decodeErrorAlert
+            self.performSegue(withIdentifier: "charachter", sender: nil)
         }
         
     }
     
-
+    
 }
 
 extension MenuCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 50, height: 100)
     }
+}
+
+
+// MARK: - Alert controller setup
+extension MenuCollectionViewController: AlertDelegate {
+    func successAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: "Success",
+                message: "Data recieved",
+                preferredStyle: .alert
+            )
+            
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func failedDecodeAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: "Failed",
+                message: "Wrong data from source",
+                preferredStyle: .alert
+            )
+            
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func failedURLAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: "Failed",
+                message: "Wrong URL adress",
+                preferredStyle: .alert
+            )
+            
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
 }
