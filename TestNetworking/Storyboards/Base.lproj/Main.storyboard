@@ -63,6 +63,7 @@
                     <connections>
                         <segue destination="y4o-Ns-cRF" kind="show" identifier="bookDescription" id="l4q-BT-l7c"/>
                         <segue destination="BXk-5z-fDR" kind="show" identifier="charachter" id="Uth-3Q-cJW"/>
+                        <segue destination="KDl-WN-gXL" kind="show" identifier="table" id="gpy-hm-veC"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jM-Ot-2JH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,6 +102,98 @@
             </objects>
             <point key="canvasLocation" x="1629" y="226"/>
         </scene>
+        <!--Full list-->
+        <scene sceneID="V5d-Yw-0zl">
+            <objects>
+                <tableViewController id="n8A-Yq-lCR" customClass="AllCharachtersTableViewController" customModule="TestNetworking" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Rc-nZ-hlo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" rowHeight="120" id="ilN-cn-F6K" customClass="AllCharachtersCell" customModule="TestNetworking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ilN-cn-F6K" id="MpX-ue-MLt" customClass="cell">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GMg-Co-Ah5">
+                                            <rect key="frame" x="298" y="6" width="108" height="108"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="GMg-Co-Ah5" secondAttribute="height" multiplier="1:1" id="LTy-6N-Bh0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB1-yI-8K3">
+                                            <rect key="frame" x="8" y="48" width="51.5" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="ohs-gG-9px">
+                                            <rect key="frame" x="243" y="11" width="47" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tiI-xR-eCM">
+                                            <rect key="frame" x="242.5" y="85" width="47.5" height="24"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tiI-xR-eCM" firstAttribute="bottom" secondItem="MpX-ue-MLt" secondAttribute="bottomMargin" id="61o-dK-2Zh"/>
+                                        <constraint firstItem="GMg-Co-Ah5" firstAttribute="centerY" secondItem="MpX-ue-MLt" secondAttribute="centerY" id="6ho-Ns-9th"/>
+                                        <constraint firstItem="KB1-yI-8K3" firstAttribute="centerY" secondItem="MpX-ue-MLt" secondAttribute="centerY" id="MFg-Q2-ZgX"/>
+                                        <constraint firstItem="GMg-Co-Ah5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KB1-yI-8K3" secondAttribute="trailing" constant="8" symbolic="YES" id="MuG-fm-B9v"/>
+                                        <constraint firstAttribute="trailing" secondItem="GMg-Co-Ah5" secondAttribute="trailing" constant="8" id="Q6w-Gp-t9b"/>
+                                        <constraint firstItem="KB1-yI-8K3" firstAttribute="leading" secondItem="MpX-ue-MLt" secondAttribute="leading" constant="8" id="REo-pw-Q70"/>
+                                        <constraint firstItem="tiI-xR-eCM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MpX-ue-MLt" secondAttribute="leading" constant="20" symbolic="YES" id="Vl0-xd-HSU"/>
+                                        <constraint firstItem="ohs-gG-9px" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MpX-ue-MLt" secondAttribute="leading" constant="20" symbolic="YES" id="cOm-7F-qrs"/>
+                                        <constraint firstItem="GMg-Co-Ah5" firstAttribute="height" secondItem="MpX-ue-MLt" secondAttribute="height" multiplier="0.9" id="mlJ-QS-KTi"/>
+                                        <constraint firstItem="ohs-gG-9px" firstAttribute="top" secondItem="MpX-ue-MLt" secondAttribute="topMargin" id="uBB-gE-oWC"/>
+                                        <constraint firstItem="GMg-Co-Ah5" firstAttribute="leading" secondItem="tiI-xR-eCM" secondAttribute="trailing" constant="8" id="vMC-aR-DXc"/>
+                                        <constraint firstItem="GMg-Co-Ah5" firstAttribute="leading" secondItem="ohs-gG-9px" secondAttribute="trailing" constant="8" id="xOG-yX-kFI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="charachterFamily" destination="tiI-xR-eCM" id="AS2-wV-nB5"/>
+                                    <outlet property="charachterFullname" destination="KB1-yI-8K3" id="exC-7O-7e4"/>
+                                    <outlet property="charachterImage" destination="GMg-Co-Ah5" id="uea-vY-icn"/>
+                                    <outlet property="charachterTitle" destination="ohs-gG-9px" id="qmN-kl-Yjk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="n8A-Yq-lCR" id="bZ2-bi-tfk"/>
+                            <outlet property="delegate" destination="n8A-Yq-lCR" id="YWV-xG-BH3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Full list" id="iSd-dI-8Wc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tD-3j-84c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="858.48214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZTA-83-XPf">
+            <objects>
+                <navigationController id="KDl-WN-gXL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="V5x-jp-Oet"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4AP-4c-qpc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="n8A-Yq-lCR" kind="relationship" relationship="rootViewController" id="2DS-aw-WHc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uo-kC-w5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="859"/>
+        </scene>
         <!--Book View Controller-->
         <scene sceneID="NAv-yE-haj">
             <objects>
@@ -113,15 +206,17 @@
                                 <rect key="frame" x="16" y="104" width="382" height="742"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oSU-bq-RJh">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="e3i-eV-3aj"/>
+                                            <constraint firstAttribute="height" constant="150" id="e3i-eV-3aj"/>
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WZR-zL-ENH">
-                                        <rect key="frame" x="0.0" y="280" width="382" height="462"/>
+                                        <rect key="frame" x="0.0" y="180" width="382" height="562"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <mutableString key="text">A Game of Thrones
+
+Fifteen years prior to the novel, the Seven Kingdoms were torn apart by a civil war, known alternately as "Robert's Rebellion" and the "War of the Usurper." Prince Rhaegar Targaryen kidnapped Lyanna Stark, arousing the ire of her family and of her betrothed, Lord Robert Baratheon (the war's titular rebel). The Mad King, Aerys II Targaryen, had Lyanna's father and eldest brother executed when they demanded her safe return. Her second brother, Eddard, joined his boyhood friend Robert Baratheon and Jon Arryn, with whom they had been fostered as children, in declaring war against the ruling Targaryen dynasty, securing the allegiances of House Tully and House Arryn through a network of dynastic marriages (Lord Eddard to Catelyn Tully and Lord Arryn to Lysa Tully). The powerful House Tyrell continued to support the King, but House Lannister and House Martell both stalled due to insults against their houses by the Targaryens. The civil war climaxed with the Battle of the Trident, when Prince Rhaegar was killed in battle by Robert Baratheon. The Lannisters finally agreed to support King Aerys, but then brutally turned against him, sacking the capital at King's Landing. Jaime Lannister of the Kingsguard betrayed and murdered King Aerys and House Lannister swore loyalty to Robert Baratheon. The Tyrells and remaining royalists surrendered and Robert Baratheon was declared King of the Seven Kingdoms. Unfortunately, during the war, Lyanna Stark had died, apparently of illness shortly after her brother captured the fortress where she'd been held captive; Robert Baratheon instead married Cersei Lannister to cement the alliance with her House. Despite Robert's victory, the Mad King's younger son Viserys and only daughter Daenerys were taken to safety across the sea by loyal retainers. After the war House Martell chose a path of isolation, since Prince Doran's sister Elia Martell (Prince Rhaegar's wife) and her young children had been killed by knights sworn to House Lannister during the storming of the capital.</mutableString>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

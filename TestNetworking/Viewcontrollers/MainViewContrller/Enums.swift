@@ -11,8 +11,9 @@ enum MenuItems: String, CaseIterable {
     case aboutBook = "About book"
     case jonSnow = "Jon Snow"
     case daenerys = "Daenerys Targaryen"
-    case urlErrorAlert = "URL Error Alert"
+    case urlErrorAlert = "Data Error Alert"
     case decodeErrorAlert = "Decode Error Alert"
+    case allCharachters = "All charachters"
 }
 
 enum URLList: String {
@@ -21,4 +22,5 @@ enum URLList: String {
     case daenerys = "https://anapioficeandfire.com/api/characters/1303"
     case urlErrorAlert = "bla bla bla"
     case decodeErrorAlert = "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk5MTYwNDc0OF5BMl5BanBnXkFtZTcwOTg2NDg1Nw@@._V1._SX100_SY140_.jpg"
+    case allCharachters = "https://thronesapi.com/api/v2/Characters"
 }

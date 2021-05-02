@@ -11,5 +11,4 @@ class MenuViewCell: UICollectionViewCell {
     
     @IBOutlet weak var menuLabel: UILabel!
     
-    
 }

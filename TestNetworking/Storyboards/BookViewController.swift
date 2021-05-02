@@ -14,10 +14,8 @@ class BookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
-        
     }
     
-
     private func fetchData() {
         guard let url = URL(string: URLList.bookImage.rawValue) else { return }
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -32,8 +30,6 @@ class BookViewController: UIViewController {
                 self.mainImage.image = image
             }
         }.resume()
-        
     }
-   
-
+    
 }

@@ -5,6 +5,7 @@
 //  Created by Stanislav Testov on 30.04.2021.
 //
 
+
 struct Charachter: Decodable {
     let name: String?
     let culture: String?
@@ -24,3 +25,5 @@ struct Charachter: Decodable {
     }
     
 }
+
+
