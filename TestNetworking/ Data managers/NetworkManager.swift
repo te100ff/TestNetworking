@@ -5,6 +5,8 @@
 //  Created by Stanislav Testov on 30.04.2021.
 //
 import Foundation
+import Alamofire
+
 
 enum Failure: Error {
     case wrongURL
@@ -50,6 +52,22 @@ class NetworkManager {
                 print(error.localizedDescription)
             }
         }.resume()
+    }
+    
+    func alamofireFetchData() {
+        AF.request(URLList.allCharachters.rawValue)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    guard let charactersData = value as? [[String: Any]] else { return }
+                    for characterData in charactersData {
+                        let charachter = TableCharachter(characterData: characterData)
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription )
+                }
+            }
     }
     
     private init() {}
